@@ -7,13 +7,13 @@
 
 import UIKit
 
-extension UICollectionViewCell{
+public extension UICollectionViewCell{
     static var cellIdentifier : String {
         return "\(String(describing: self))Identifier"
     }
 }
 
-extension UICollectionReusableView {
+public extension UICollectionReusableView {
     static var headerIdentifier : String{
         return "\(String(describing: self))Identifier"
     }
