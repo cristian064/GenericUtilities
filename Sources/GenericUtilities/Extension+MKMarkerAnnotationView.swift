@@ -7,7 +7,7 @@
 
 import MapKit
 
-public extension MKMarkerAnnotationView {
+public extension MKAnnotationView {
     static var identifier : String{
         return "\(String(describing: self))Identifier"
     }
