@@ -11,11 +11,11 @@ public struct ErrorManager: Error {
     
     let code: Int
     
-    init(code: Int){
+    public init(code: Int){
         self.code = code
     }
     
-    init(error: Error) {
+    public init(error: Error) {
         self.code = 9999
     }
 }
