@@ -9,5 +9,5 @@ import Foundation
 
 public enum ResponseAPI<T> {
     case success(T)
-    case failure(Error)
+    case failure(ErrorManager)
 }
