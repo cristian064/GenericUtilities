@@ -22,3 +22,12 @@ public extension UICollectionReusableView {
     }
 }
 
+
+public protocol ReuseIdentifier: AnyObject {
+}
+
+public extension ReuseIdentifier {
+    static var reuseIdentifier: String {
+        return "\(String(describing: self))Identifier"
+    }
+}
