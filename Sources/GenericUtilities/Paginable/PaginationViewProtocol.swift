@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Combine
 
-protocol PaginationViewProtocol: AnyObject {
+public protocol PaginationViewProtocol: AnyObject {
     associatedtype ViewModel: PaginationViewModelProtocol
     var viewModel: ViewModel {get set}
     var cancellables: Set<AnyCancellable> {get set}
@@ -17,7 +18,7 @@ protocol PaginationViewProtocol: AnyObject {
     func reloadData()
 }
 
-extension PaginationViewProtocol {
+public extension PaginationViewProtocol {
     func setupPaginationCombine() {
         self.viewModel.elementsSubject.sink {[weak self] _ in
             self?.reloadData()
